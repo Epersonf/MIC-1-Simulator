@@ -31,14 +31,14 @@ function run(pc_line) {
     }
     else if (cmdName == "JPOS") {
         if (ac >= 0)
-            pc = x;
+            pc = x - 1;
     }
     else if (cmdName == "JZER") {
         if (ac == 0)
-            pc = x;
+            pc = x - 1;
     }
     else if (cmdName == "JUMP") {
-        pc = x;
+        pc = x - 1;
     }
     else if (cmdName == "LOCO") {
         ac = x;
@@ -57,16 +57,16 @@ function run(pc_line) {
     }
     else if (cmdName == "JNEG") {
         if (ac < 0)
-            pc = x;
+            pc = x - 1;
     }
     else if (cmdName == "JNZE") {
         if (ac != 0)
-            pc = x;
+            pc = x - 1;
     }
     else if (cmdName == "CALL") {
         sp = sp - 1;
         memory[sp] = pc;
-        pc = x;
+        pc = x - 1;
     }
     else if (cmdName == "PSHI") {
         sp = sp - 1;
@@ -85,7 +85,7 @@ function run(pc_line) {
         sp = sp + 1;
     }
     else if (cmdName == "RETN") {
-        pc = memory[sp];
+        pc = memory[sp] - 1;
         sp = sp + 1;
     }
     else if (cmdName == "SWAP") {
