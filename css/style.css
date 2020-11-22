@@ -1,0 +1,63 @@
+:root {
+    --primary-black: #333;
+    --secondary-black: #666;
+    --primary-white: #fafafa;
+    --secondary-white: #dadada;
+    
+    color: var(--primary-white);
+    background-color: var(--primary-black);
+}
+
+textarea {
+    background-color: var(--secondary-black);
+
+    min-height: 300px;
+    height: 500px;
+    max-height: 90vh;
+
+    width: 328px;
+
+    resize: none;
+    color: var(--primary-white);
+    outline: none;
+}
+
+button {
+    background-color: var(--primary-black);
+    outline: none;
+    border: 1px solid var(--secondary-white);
+    color: var(--primary-white);
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+}
+
+.tools {
+    padding: 5px;
+}
+
+.inputs {
+    display: flex;
+}
+
+textarea.labels {
+    width: 50px;
+}
+
+.variable-interface {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 5em;
+}

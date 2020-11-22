@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MIC-1 Simulator</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main>
+            <div class="tools">
+                <button id="run-btn">Run</button>
+                <button id="reset-btn">Reset variables</button>
+            </div>
+            <div class="container">
+                <section class="inputs">
+                    <textarea class="labels"></textarea>
+                    <textarea class="code"></textarea>
+                </section>
+                <textarea class="variables"readonly="true"></textarea>
+                <section class="variable-interface">
+                    <textarea id="load-state" placeholder="variable-name;value"></textarea>
+                    <button id="add-var-btn">Add</button>
+                </section>
+            </div>
+        </main>
+        <script src="code/code_execution.js"></script>
+        <script src="code/ui.js"></script>
+        <script src="code/variable_manager.js"></script>
+    </body>
+</html>
